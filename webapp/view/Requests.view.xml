@@ -1,0 +1,39 @@
+<mvc:View controllerName="h7.hamzio7.leaverequests.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Table id="leaveTable" growing="true" growingScrollToLoad="true" items="{/LeaveRequestSet}">
+        <headerToolbar>
+            <Toolbar id="_IDGenToolbar">
+                <Title id="_IDGenTitle" text="Leave Requests" />
+            </Toolbar>
+        </headerToolbar>
+        <columns>
+            <Column id="_IDGenColumn1">
+                <Text id="_IDGenText" text="Request ID" />
+            </Column>
+            <Column id="_IDGenColumn2">
+                <Text id="_IDGenText1" text="Employee ID" />
+            </Column>
+            <Column id="_IDGenColumn3">
+                <Text id="_IDGenText2" text="Start Date" />
+            </Column>
+            <Column id="_IDGenColumn4">
+                <Text id="_IDGenText3" text="End Date" />
+            </Column>
+            <Column id="_IDGenColumn5">
+                <Text id="_IDGenText4" text="Status" />
+            </Column>
+        </columns>
+        <items>
+            <ColumnListItem id="_IDGenColumnListItem">
+                <cells>
+                    <Text id="_IDGenText5" text="{RequestId}" />
+                    <Text id="_IDGenText6" text="{EmployeeId}" />
+                    <Text id="_IDGenText7" text="{StartDate}" />
+                    <Text id="_IDGenText8" text="{EndDate}" />
+                    <Text id="_IDGenText9" text="{Status}" />
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
+</mvc:View>

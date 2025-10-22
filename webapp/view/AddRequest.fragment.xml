@@ -1,0 +1,25 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:layout="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form">
+    <Dialog id="requestDialog" title="Create Leave Request" draggable="true" resizable="true">
+        <content>
+            <f:SimpleForm id="_IDGenSimpleForm" editable="true" layout="ResponsiveGridLayout">
+                <Label id="_IDGenLabel" text="Employee ID" />
+                <Input id="inputEmployeeId" value="{newRequest>/EmployeeId}" />
+                <Label id="_IDGenLabel1" text="Start Date" />
+                <DateTimePicker id="inputStartDate" value="{newRequest>/StartDate}" displayFormatType="Persian" displayFormat="yyyy-MM-dd HH:mm"/>
+                <Label id="_IDGenLabel2" text="End Date" />
+                <DateTimePicker id="inputEndDate" value="{newRequest>/EndDate}" displayFormatType="Persian" displayFormat="yyyy-MM-dd HH:mm" />
+                <Label id="_IDGenLabel3" text="Status" />
+                <Input id="inputStatus" value="{newRequest>/Status}" />
+            </f:SimpleForm>
+        </content>
+        <beginButton>
+            <Button id="_IDGenButton" text="Create" press=".createLeaveRequest" />
+        </beginButton>
+        <endButton>
+            <Button id="_IDGenButton1" text="Cancel" press=".closeRequestDialog" />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

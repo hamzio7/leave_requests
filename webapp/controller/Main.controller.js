@@ -18,7 +18,22 @@ sap.ui.define(
           EndDate: null,
           Status: "Pending",
         });
+
         this.getView().setModel(this._oNewRequestModel, "newRequest");
+      },
+      onOpenDialog: function () {
+        const that = this;
+
+        if (!this.oDialog) {
+          this.loadFragment({
+            name: "h7.hamzio7.leaverequests.view.AddRequest",
+          }).then(function (oDialog) {
+            that.oDialog = oDialog;
+            that.oDialog.open();
+          });
+        } else {
+          this.oDialog.open();
+        }
       },
 
       openRequestDialog() {
@@ -35,8 +50,8 @@ sap.ui.define(
       },
 
       closeRequestDialog() {
-        if (this._oRequestDialog) {
-          this._oRequestDialog.close();
+        if (this.oDialog) {
+          this.oDialog.close();
         }
       },
 
@@ -89,14 +104,10 @@ sap.ui.define(
       _formatDate(oDate) {
         if (!oDate) return null;
 
-        // Convert string to Date if necessary
         if (typeof oDate === "string" || oDate instanceof String) {
-          // Try to parse string ISO format (yyyy-mm-dd)
-          // Use String(oDate) to ensure a primitive string is passed to Date (avoids String object typing issues)
           oDate = new Date(String(oDate));
         }
 
-        // Ensure it's a valid date object
         if (!(oDate instanceof Date) || isNaN(oDate.getTime())) {
           return null;
         }
