@@ -1,0 +1,24 @@
+{
+  "generationParameters": {
+    "generationDate": "Wed Oct 22 2025 09:59:17 GMT+0330 (Iran Standard Time)",
+    "generatorPlatform": "Visual Studio Code",
+    "serviceType": "OData URL",
+    "metadataFilename": "",
+    "serviceUrl": "https://pc-sap-sbx.pakchoob.local:8001/sap/opu/odata/SAP/ZHT_LEAVE_REQ_SRV",
+    "appName": "leave_requests",
+    "appTitle": "Leave Requests",
+    "appDescription": "An SAP Leave Request application.",
+    "appNamespace": "h7.hamzio7",
+    "ui5Theme": "sap_fiori_3_dark",
+    "ui5Version": "1.141.3",
+    "enableCodeAssist": true,
+    "enableEslint": true,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.19.1",
+    "template": "Basic V2",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}
