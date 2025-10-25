@@ -46,7 +46,7 @@
   "sap.ui5": {
     "flexEnabled": true,
     "dependencies": {
-      "minUI5Version": "1.141.3",
+      "minUI5Version": "1.141.0",
       "libs": {
         "sap.m": {},
         "sap.ui.core": {}
@@ -94,12 +94,20 @@
           "target": [
             "TargetMain"
           ]
+        },{
+          "pattern": "detail/{requestPath}",
+          "name": "detail",
+          "target": "detail"
         }
       ],
       "targets": {
         "TargetMain": {
           "id": "Main",
           "name": "Main"
+        },
+        "detail": {
+          "id": "detail",
+          "name": "Detail"
         }
       }
     },

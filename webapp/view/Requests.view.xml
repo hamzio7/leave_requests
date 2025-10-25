@@ -1,4 +1,4 @@
-<mvc:View controllerName="h7.hamzio7.leaverequests.controller.Main"
+<mvc:View controllerName="h7.hamzio7.leaverequests.controller.Request"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <Table id="leaveTable" growing="true" growingScrollToLoad="true" items="{/LeaveRequestSet}">
@@ -23,6 +23,9 @@
             <Column id="_IDGenColumn5">
                 <Text id="_IDGenText4" text="Status" />
             </Column>
+            <Column id="_IDGenColumn6">
+                <Text id="_IDGenText10" text="Actions" />
+            </Column>
         </columns>
         <items>
             <ColumnListItem id="_IDGenColumnListItem">
@@ -32,6 +35,11 @@
                     <Text id="_IDGenText7" text="{StartDate}" />
                     <Text id="_IDGenText8" text="{EndDate}" />
                     <Text id="_IDGenText9" text="{Status}" />
+                    <FlexBox id="d">
+                        <Button id="show" icon="sap-icon://show" class = "sapUiSmallMarginEnd" press=".onShowPress" />
+                        <Button id="edit" icon="sap-icon://edit" press=".onEditPress" class = "sapUiSmallMarginEnd"/>
+                        <Button id="delete" icon="sap-icon://delete" press=".onDeletePress" class = "sapUiSmallMarginEnd" type="Reject"/>
+                    </FlexBox>
                 </cells>
             </ColumnListItem>
         </items>

@@ -1,0 +1,6 @@
+<mvc:View xmlns="sap.m" controllerName="h7.hamzio7.leaverequests.controller.Detail"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page id="dtpage" title="Details">
+		<ObjectHeader id="header_lr" title="Leave Request {RequestId}"/>
+	</Page>
+</mvc:View>

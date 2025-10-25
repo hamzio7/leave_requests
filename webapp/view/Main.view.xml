@@ -8,7 +8,6 @@
             <Toolbar id="toolbar">
                 <Button id="btn_add_request" text="Request a Leave" press=".onOpenDialog" />
             </Toolbar>
-
             <mvc:XMLView id="requests" viewName="h7.hamzio7.leaverequests.view.Requests" />
         </content>
     </Page>
