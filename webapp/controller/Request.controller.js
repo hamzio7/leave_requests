@@ -27,6 +27,18 @@ sap.ui.define(
       onSavePress() {
         this._dialogHelper.handleSavePress(this);
       },
+      statusHighlight: function (sStatus) {
+        switch (sStatus) {
+          case "Approved":
+            return "Success"; // Green highlight
+          case "Rejected":
+            return "Error"; // Red highlight
+          case "Pending":
+            return "Warning"; // Yellow highlight
+          default:
+            return "None"; // Default no highlight
+        }
+      },
 
       onCancelPress() {
         this._dialogHelper.handleCancelPress(this);

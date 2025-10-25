@@ -1,6 +1,10 @@
 sap.ui.define(
-  ["sap/ui/core/mvc/Controller", "sap/m/MessageBox"],
-  (Controller, MessageBox) => {
+  [
+    "sap/ui/core/mvc/Controller",
+    "sap/m/MessageBox",
+    "sap/ui/core/routing/History",
+  ],
+  (Controller, MessageBox, History) => {
     "use strict";
 
     return Controller.extend("h7.hamzio7.leaverequests.controller.Detail", {
@@ -24,6 +28,16 @@ sap.ui.define(
             console.error(oError);
           },
         });
+      },
+      onNavBack() {
+        const oHistory = History.getInstance();
+        const sPreviousHash = oHistory.getPreviousHash();
+        if (sPreviousHash !== undefined) {
+          window.history.go(-1);
+        } else {
+          const oRouter = this.getOwnerComponent().getRouter();
+          oRouter.navTo("overview", {}, true);
+        }
       },
     });
   }

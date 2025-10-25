@@ -74,7 +74,7 @@ sap.ui.define(
 
       createLeaveRequest(oModel, data, fnSuccess, fnError) {
         const payload = {
-          RequestId: data.EmployeeId + Date.now(),
+          RequestId: 'REQ' + data.EmployeeId + Date.now(),
           EmployeeId: data.EmployeeId,
           StartDate: data.StartDate,
           EndDate: data.EndDate,
